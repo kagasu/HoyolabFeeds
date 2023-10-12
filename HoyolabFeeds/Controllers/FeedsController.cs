@@ -21,10 +21,11 @@ public class FeedsController : ControllerBase
         _clientFactory = clientFactory;
     }
 
-    private async Task<ResponseData> GetUserPosts(string userId)
+    private async Task<ResponseData> GetUserPosts(string userId, string language)
     {
         var url = $"https://bbs-api-os.hoyolab.com/community/post/wapi/userPost?size=15&uid={userId}";
         var request = new HttpRequestMessage(HttpMethod.Get, url);
+        request.Headers.TryAddWithoutValidation("X-Rpc-Language", language);
         var client = _clientFactory.CreateClient();
         var httpResponse = await client.SendAsync(request).ConfigureAwait(false);
         var str =  await httpResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
@@ -109,10 +110,10 @@ public class FeedsController : ControllerBase
         return ms;
     }
 
-    [HttpGet("{userId}/{type}")]
-    public async Task<IActionResult> GetRss(string userId, string type)
+    [HttpGet("{userId}/{language}/{type}")]
+    public async Task<IActionResult> GetRss(string userId, string language, string type)
     {
-        var postInfos = await GetUserPosts(userId).ConfigureAwait(false);
+        var postInfos = await GetUserPosts(userId, language).ConfigureAwait(false);
         var feed = GenerateSyndicationFeed(postInfos);
 
         var ms = GenerateFeedXmlStream(type, feed);
