@@ -6,15 +6,23 @@ Generate `RSS 2.0` or `Atom` feeds for [HoYoLAB](https://www.hoyolab.com/)
 ## Demo
 Feeds for [HonkaiSR Official Account](https://www.hoyolab.com/accountCenter/postList?id=172534910)
 
-- [RSS 2.0](https://hoyolab_feeds.kagasu.net/feeds/172534910/rss)
-- [Atom](https://hoyolab_feeds.kagasu.net/feeds/172534910/atom)
+- [ENG RSS 2.0](https://hoyolab_feeds.kagasu.net/feeds/172534910/en-us/rss)
+- [ENG Atom](https://hoyolab_feeds.kagasu.net/feeds/172534910/en-us/atom)
+- [JPN RSS 2.0](https://hoyolab_feeds.kagasu.net/feeds/172534910/ja-jp/rss)
+- [JPN Atom](https://hoyolab_feeds.kagasu.net/feeds/172534910/ja-jp/atom)
 
 Feeds for [Genshin Official Account](https://www.hoyolab.com/accountCenter/postList?id=1015537)
-- [RSS 2.0](https://hoyolab_feeds.kagasu.net/feeds/1015537/rss)
-- [Atom](https://hoyolab_feeds.kagasu.net/feeds/1015537/atom)
+
+- [ENG RSS 2.0](https://hoyolab_feeds.kagasu.net/feeds/1015537/en-us/rss)
+- [ENG Atom](https://hoyolab_feeds.kagasu.net/feeds/1015537/en-us/atom)
+- [JPN RSS 2.0](https://hoyolab_feeds.kagasu.net/feeds/1015537/ja-jp/rss)
+- [JPN Atom](https://hoyolab_feeds.kagasu.net/feeds/1015537/ja-jp/atom)
+
+### Languages
+- https://bbs-api-os-static.hoyolab.com/community/misc/wapi/langs?lang2022=true
 
 ### Limit
-- Demo limits 1 access per 10 sec.
+- Demo limits 1 access per 10 sec
 
 # Build Requirements
 - .NET 8
