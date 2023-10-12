@@ -69,6 +69,7 @@ public class FeedsController : ControllerBase
         foreach (var postInfo in data.List)
         {
             var item = new SyndicationItem();
+            item.Id = postInfo.Post.PostId;
             item.Title = new TextSyndicationContent(postInfo.Post.Subject);
             item.Links.Add(new SyndicationLink(new Uri($"{baseUrl}{postInfo.Post.PostId}")));
             item.Summary = new TextSyndicationContent(postInfo.Post.Content);
