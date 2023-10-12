@@ -90,7 +90,7 @@ public class FeedsController : ControllerBase
         };
 
         var ms = new MemoryStream();
-        var writer = XmlWriter.Create(ms, settings);
+        using var writer = XmlWriter.Create(ms, settings);
         switch (type)
         {
             case "rss":
