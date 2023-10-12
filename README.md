@@ -21,8 +21,5 @@ Feeds for [Genshin Official Account](https://www.hoyolab.com/accountCenter/postL
 ### Languages
 - https://bbs-api-os-static.hoyolab.com/community/misc/wapi/langs?lang2022=true
 
-### Limit
-- Demo limits 1 access per 10 sec
-
 # Build Requirements
 - .NET 8
