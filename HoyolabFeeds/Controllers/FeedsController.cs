@@ -86,8 +86,6 @@ public class FeedsController : ControllerBase
         var settings = new XmlWriterSettings
         {
             Encoding = Encoding.UTF8,
-            NewLineHandling = NewLineHandling.Entitize,
-            NewLineOnAttributes = false,
             Indent = true
         };
 
